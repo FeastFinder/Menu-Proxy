@@ -15,6 +15,7 @@ app.get('/api/restaurants/:id/menu', (req, res) => {
       res.status(200).send(data.data);
     })
     .catch((error) => {
+      console.log(error);
       res.status(404).send(error);
     });
 });
