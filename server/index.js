@@ -1,10 +1,11 @@
 const newrelic = require('newrelic');
 const express = require('express');
 const axios = require('axios');
+const url = require('./urls');
+
 const app = express();
 const port = 3000;
-
-const menusUrl = 'http://localhost:3004';
+const { menusUrl } = url;
 
 app.use('/restaurants/:id', express.static('public'));
 
