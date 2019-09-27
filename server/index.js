@@ -8,6 +8,7 @@ const port = 3000;
 const { menusUrl } = url;
 
 app.use('/restaurants/:id', express.static('public'));
+app.use(express.static('public'));
 
 app.get('/api/restaurants/:id/menu', (req, res) => {
   const { id } = req.params;
